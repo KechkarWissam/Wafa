@@ -15,7 +15,7 @@
   </div>
 
    @include('admin.layouts.navbars.navbar') 
-   @include('admin.layouts.sidebars.sidebar2') 
+   @include('admin.layouts.sidebars.sidebar') 
    @include('admin.layouts.navbars.header') 
     <!-- Main content -->
     <section class="content">

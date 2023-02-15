@@ -77,7 +77,7 @@
           {{-- products management --}}
          <li class="nav-item ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-plus-square"></i>
               <p>
                 Produits
                 <i class="right fas fa-angle-left"></i>
@@ -101,7 +101,7 @@
           {{-- comments and email --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
+              <i class="nav-icon fas fa-comment"></i>
               <p>
                 Commentaires
                 {{-- <span class="right badge badge-danger">New</span> --}}
@@ -119,7 +119,7 @@
            {{-- settings management --}}
          <li class="nav-item ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas  fa-cog"></i>
               <p>
                 Paramètres
                 <i class="right fas fa-angle-left"></i>

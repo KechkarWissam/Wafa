@@ -48,7 +48,7 @@
           <li class="nav-header">Utilisateurs</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Gestion des utilisateurs
               </p>
@@ -56,7 +56,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Gestion des roles
               </p>
@@ -64,7 +64,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Gestion des permissions
               </p>
@@ -74,7 +74,7 @@
           <li class="nav-header">Produits</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Gestion des produits
                 <span class="badge badge-info right">2</span>
@@ -83,7 +83,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-cubes"></i>
               <p>
                 Gestion des catégories
               </p>
@@ -93,7 +93,7 @@
           <li class="nav-header">Messages</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-comment"></i>
               <p>
                 Commentaires
                 {{-- <span class="right badge badge-danger">New</span> --}}
@@ -102,7 +102,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Email
               </p>
@@ -112,7 +112,7 @@
           <li class="nav-header">Paramètres</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
                 Paramètres généraux
               </p>
@@ -120,7 +120,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
                 Contenu des pages
               </p>
@@ -128,7 +128,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
                 Page d'accueil
               </p>
