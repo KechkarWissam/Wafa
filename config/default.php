@@ -69,10 +69,10 @@ return [
                 'view replays',
 
             ],
-            mediaPermissions(\App\Models\Product::class, 'product'),
-            mediaPermissions(\App\Models\Setting::class, 'setting'),
-            mediaPermissions(\App\Models\ProductCategory::class, 'category'),
-            mediaPermissions(\App\Models\Blog::class, 'blog')
+            // mediaPermissions(\App\Models\Product::class, 'product'),
+            // mediaPermissions(\App\Models\Setting::class, 'setting'),
+            // mediaPermissions(\App\Models\ProductCategory::class, 'category'),
+            // mediaPermissions(\App\Models\Blog::class, 'blog')
         ),
         'publisher' => array_merge([
             'add product',
@@ -86,8 +86,8 @@ return [
             'view product categories',
             'show product category',
         ],
-            mediaPermissions(\App\Models\Product::class, 'product'),
-            mediaPermissions(\App\Models\ProductCategory::class, 'category')
+            // mediaPermissions(\App\Models\Product::class, 'product'),
+            // mediaPermissions(\App\Models\ProductCategory::class, 'category')
         )
     ],
     'roles' => [

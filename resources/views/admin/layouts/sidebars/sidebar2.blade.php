@@ -1,3 +1,6 @@
+@php
+$sidebar = config("sideBar.items");
+@endphp
 <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -35,117 +38,10 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          {{-- dashboard  --}}
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Tableau de bord
-              </p>
-            </a>
-          </li>
-          {{-- users management --}}
-          <li class="nav-item ">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Utilisateurs
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gestion des utilisateurs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gestion des roles</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gestion des permissions</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          {{-- products management --}}
-         <li class="nav-item ">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-plus-square"></i>
-              <p>
-                Produits
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gestion des produits</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gestion des catégories</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          {{-- comments and email --}}
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-comment"></i>
-              <p>
-                Commentaires
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
-              <p>
-                Email
-              </p>
-            </a>
-          </li>
-           {{-- settings management --}}
-         <li class="nav-item ">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas  fa-cog"></i>
-              <p>
-                Paramètres
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Paramètres généraux</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contenu des pages</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page d'accueil</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          @foreach($sidebar as $item)
+          @include('admin.nav-item',['item' => $item])
+          @endforeach
+        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
