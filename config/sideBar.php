@@ -44,7 +44,7 @@ return [
                         'name' => 'Gestion des produits' ,
                         'icon' => 'far fa-circle nav-icon' ,
                         'permission' => '',
-                        'link' => '',
+                        'link' => 'products.index',
                     ],
                     [
                         'name' => 'Gestion des catégories' ,

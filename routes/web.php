@@ -1,5 +1,6 @@
 <?php
 
+use App\Actions\showHome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return view('admin.layouts.master');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
+// Route::get('/', function () {
+//     return view('admin.layouts.master');
+// })->name('home');
+Route::get('/',showHome::class)->name('home');

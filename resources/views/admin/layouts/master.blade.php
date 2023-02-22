@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 @include('admin.layouts.extra.meta')
-  <title>Wafa | Mailbox</title>  
+  <title>Wafa Faile| {{ $page_title }}</title>  
   @include('admin.layouts.extra.css')
 
 </head>
@@ -16,16 +16,18 @@
 
    @include('admin.layouts.navbars.navbar') 
    @include('admin.layouts.sidebars.sidebar2') 
-   @include('admin.layouts.navbars.header') 
     <!-- Main content -->
-    <section class="content">
+     <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+       @yield('header')
+    <div class="content">
       <div class="container-fluid">
         @yield('content')
       </div>
-    </section>
     </div>
-   @include('admin.layouts.footers.footer') 
-
+    </div>
+    @include('admin.layouts.footers.footer') 
+  </div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -34,6 +36,7 @@
 </div>
 <!-- ./wrapper -->
 @include('admin.layouts.extra.js')
-
+{{-- @yield('js') --}}
+@stack('js')
 </body>
 </html>

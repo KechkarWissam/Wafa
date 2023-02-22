@@ -39,7 +39,7 @@ $sidebar = config("sideBar.items");
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           @foreach($sidebar as $item)
-          @include('admin.nav-item',['item' => $item])
+          @include('admin.layouts.sidebars.nav-item',['item' => $item])
           @endforeach
         </ul>
       </nav>
