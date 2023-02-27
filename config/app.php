@@ -195,6 +195,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Modules\Products\providers\ProductsProvider::class,
+        App\Modules\ProductCategories\providers\ProductCategoriesProvider::class,
 
 
     ],

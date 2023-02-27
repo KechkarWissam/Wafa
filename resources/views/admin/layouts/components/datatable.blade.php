@@ -34,33 +34,26 @@
 
 @push('js')
     <script>
-     //  $(document).on('ready', function () {
+     $(document).ready(function() {
             const myId = '#{!! $id !!}';
             let myConfig = @json($config);
            // console.log(myConfig);
-            $(myId).DataTable({
+            var table=$(myId).DataTable({
             "responsive": true,
             "lengthChange": false, 
             "autoWidth": false,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
             "language": {
-                        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
             },
-             'ajax': {
-                    url:  myConfig.ajax,
-              },
-             'columns': myConfig.columns,
-             'order' : myConfig.order
-            }).buttons().container().appendTo(myId+'_wrapper .col-md-6:eq(0)');
-                /*$(myId).DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-                });*/
-       // })  
+            "ajax": {
+                url:  myConfig.ajax,
+            },
+            "columns": myConfig.columns,
+            "order" : myConfig.order
+            })
+            .buttons().container().appendTo(myId+'_wrapper .col-md-6:eq(0)');
+            
+      })
     </script>  
 @endpush

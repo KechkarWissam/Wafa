@@ -6,7 +6,7 @@
 @section("content")
     @include("admin.layouts.components.button-header")
     @include('admin.layouts.components.error')
-    @include("Products::modals.add")   
+    @include("ProductCategories::modals.add")   
     @include('admin.layouts.components.datatable',[
         'id'=>$table_id,
         'heads'=>$heads,

@@ -3,6 +3,7 @@
 namespace App\Modules\Products\controllers;
 
 use App\Helpers\GenerateHeader;
+use App\Modules\ProductCategories\models\ProductCategory;
 use Exception;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -22,6 +23,8 @@ class ShowProductsPage
 
         $header = GenerateHeader::run('Produits', 'icon-user', 'blue', 'Liste des produits');
 
+        $categories=ProductCategory::query()->get();
+
         $btn_add='Products::actions.btn-add';
         $heads = [
             ['label' => 'Id'],
@@ -30,6 +33,7 @@ class ShowProductsPage
             ['label' => 'Plis'],
             ['label' => 'Dimension'],
             ['label' => 'Quantité'],
+            // ['label' => 'Catégorie'],
             ['label' => 'Date de création'],
             ['label' => 'Actions', 'no-export' => true],
         ];
@@ -44,16 +48,17 @@ class ShowProductsPage
                 ['name' => 'ply','data'=>'ply'],
                 ['name' => 'dimension','data'=>'dimension'],
                 ['name' => 'quantity','data'=>'quantity'],
+                // ['name' => 'category','data'=>'category'],
                 ['name' => 'created_at','data'=>'created_at'],
                 ['name' => 'action','data'=>'action']
             ],
         ];
 
 
-        return view('Products::index',compact('btn_add','header'))
+        return view('Products::index',compact('btn_add','header','categories'))
             ->with([
                 'heads' => $heads,
-                'table_id' => "Products_table",
+                'table_id' => "products",
                 'config' => $config,
                 'page_title'=>'Produits'
             ]);
@@ -67,10 +72,14 @@ class ShowProductsPage
 
     private function genAjaxResponse(): JsonResponse|Exception
     {
+        $categories=ProductCategory::query()->get();
         $data = Product::query()->orderby('created_at', 'desc');
+        // ->with('category')
         return DataTables::of($data)
             ->addIndexColumn()
-            ->addColumn('action', 'Products::actions.btn')
+            ->addColumn('action',function ($model) use ($categories){
+                return view( 'Products::actions.btn',compact('model','categories'));
+            })
             ->addColumn('responsive', "")
             ->addColumn('created_at', function ($param) {
 
@@ -78,13 +87,16 @@ class ShowProductsPage
 
             })
             ->addColumn('dimension', function ($param) {
-
-              if($param->width && $param->height)  return $param->width + 'cm' * $param->height + 'cm' ;
-              if($param->width && !$param->height)  return $param->width + 'cm' ;
+              if($param->width && $param->height)  return $param->width.' cm'.'*'.$param->height.' cm' ;
+              if($param->width && !$param->height)  return $param->width.' cm' ;
               if(!$param->width && !$param->height)  return '' ;
+            })
+            ->addColumn('category', function ($param) {
+
+            //    return $param->category->name ;
 
             })
-            ->rawColumns(['action', 'responsive', 'created_at','dimension'])
+            ->rawColumns(['action', 'responsive', 'created_at','dimension','category'])
             ->make();
     }
 }

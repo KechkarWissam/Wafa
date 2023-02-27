@@ -50,7 +50,7 @@ return [
                         'name' => 'Gestion des catégories' ,
                         'icon' => 'far fa-circle nav-icon' ,
                         'permission' => '',
-                        'link' => '',
+                        'link' => 'productcategories.index',
                     ],
                 ] 
             ],
