@@ -181,6 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
+        Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -196,6 +198,9 @@ return [
 
         App\Modules\Products\providers\ProductsProvider::class,
         App\Modules\ProductCategories\providers\ProductCategoriesProvider::class,
+        App\Modules\Roles\providers\RolesProvider::class,
+        App\Modules\Permissions\providers\PermissionsProvider::class,
+        App\Modules\Users\providers\UsersProvider::class,
 
 
     ],

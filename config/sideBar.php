@@ -18,19 +18,19 @@ return [
                         'name' => 'Gestion des utilisateurs' ,
                         'icon' => 'far fa-circle nav-icon' ,
                         'permission' => '',
-                        'link' => '',
+                        'link' => 'users.index',
                     ],
                     [
                         'name' => 'Gestion des roles' ,
                         'icon' => 'far fa-circle nav-icon' ,
                         'permission' => '',
-                        'link' => '',
+                        'link' => 'roles.index',
                     ],
                     [
                         'name' => 'Gestion des permissions' ,
                         'icon' => 'far fa-circle nav-icon' ,
                         'permission' => '',
-                        'link' => '',
+                        'link' => 'permissions.index',
                     ],
                 ] 
             ],

@@ -5,6 +5,9 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\SettingsSeeder;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -22,5 +25,9 @@ class DatabaseSeeder extends Seeder
         // ]);
         // $this->call(UsersSeeder::class);
         $this->call(SettingsSeeder::class);
+        // $role = Role::create(['name' => 'admin']);
+        // $permission = Permission::create(['name' => 'show home']);
+        // $role->givePermissionTo($permission);
+        // $permission->assignRole($role);
     }
 }
